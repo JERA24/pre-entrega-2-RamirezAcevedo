@@ -1,0 +1,158 @@
+/*RESET*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: orange;
+}
+
+.cuerpo{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr;
+    gap: 10px;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "main main"
+    "footer footer";
+}
+
+/*estilo de header*/
+
+header{
+    grid-area: header;
+    background-color: rgb(0, 58, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+header nav ul li{
+    color: whitesmoke;
+}
+
+/*estilo de main home*/
+
+main{
+    grid-area: main;
+}
+
+.principalhome h1{
+    text-align: center;
+}
+
+.principalhome h2{
+    text-align: center;
+}
+
+.principalhome div img{
+    height: 70%;
+    width: 70%;
+    object-fit: cover;
+}
+
+
+.principalhome{
+    justify-items: center;
+    align-items: center;
+    height: 160vh;
+    margin: 1rem 3rem 3rem 3rem;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 4fr;
+    row-gap: 1rem;
+}
+
+.principalhome p{
+    text-align: center;
+}
+
+/*estilos para desktop*/
+/*mq de desktop*/
+
+@media screen and (min-width:1024px){
+    .principalhome{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 10 40% 10% 40%;
+    }
+
+    .principalhome h1{
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+
+    .principalhome .nosotroshome{
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+
+    .principalhome h2{
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .principalhome .experienciahome{
+        grid-row: span 3;
+        grid-column: span 1;
+    }
+
+    .principalhome .patiocervecerohome{
+        grid-row: span 3;
+        grid-column: span 1;
+    }
+
+}
+
+
+
+/*formulario*/
+
+.Formulario{
+    margin: 30px 500px;
+    background-color: gold;
+    width: 500px;
+    border-radius: 5px;
+}
+
+/*pie de pagina*/
+
+footer{
+    grid-area: footer;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: rgb(0, 58, 0);
+    font-weight: 150;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
